@@ -8,14 +8,14 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class ListComponent {
 
-  @Input()
+  @Input() /* PAPA al HIJO */
   public characterList: Character[] = [{
     name: 'Trunk',
     power: 10
   }]
 
 
-  @Output()
+  @Output() /* HIJO emite PADRE  */
   public onDelete: EventEmitter<string> = new EventEmitter();
 
 

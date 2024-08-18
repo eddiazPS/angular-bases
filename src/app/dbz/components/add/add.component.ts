@@ -8,7 +8,7 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class AddComponent {
 
-  @Output()
+  @Output() /* HIJO emite PADRE */
   noNewCharacter: EventEmitter<Character> = new EventEmitter();
 
 
@@ -20,6 +20,7 @@ export class AddComponent {
 emitCharacter(){
 
   //debugger;
+console.log('Add - Character:');
 
   console.log(this.character);
   if (this.character.name.length === 0) return;
